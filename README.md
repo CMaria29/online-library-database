@@ -41,7 +41,9 @@ __Interogări SQL__
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-Managementul feedback-ului și al istoricului de comenzi.
 
 <br>
+
 __Validarea Integrității Datelor__
+
 <br>
 &emsp;&emsp;&emsp;Proiectul include o etapă de testare a constrângerilor pentru a garanta că baza de date respinge orice informație invalidă. Au fost simulate scenarii de eroare pentru fiecare tip de regulă: încercări de duplicare a cheilor primare (PK), încălcarea unicității email-urilor sau a codurilor CUI (UK), și inserarea de valori negative pentru prețuri sau stocuri (CK). De asemenea, au fost verificate constrângerile de integritate referențială (FK), asigurându-ne că nu pot fi șterse înregistrări părinte (ex: un tip de produs) dacă există înregistrări copil dependente (ex: produse din acea categorie), menținând astfel coerența totală a sistemului de gestiune.
 
