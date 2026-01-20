@@ -7,19 +7,19 @@ furnizorii înregistrați în sistem.
 <br><br>
 __Arhitectura Bazei de Date__
 <br>
-Schema bazei de date este normalizată și include următoarele entități principale:
+&emsp;&emsp;&emsp;Schema bazei de date este normalizată și include următoarele entități principale:
 <br>
-&emsp;&emsp;&emsp;Produs & Tip_produs: Clasificarea produselor pe categorii.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Produs & Tip_produs: Clasificarea produselor pe categorii.
 <br>
-&emsp;&emsp;&emsp;Carte: Entitate specializată legată 1:1 de tabelul Produs (prin produs_id).
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Carte: Entitate specializată legată 1:1 de tabelul Produs (prin produs_id).
 <br>
-&emsp;&emsp;&emsp;Client & Comanda: Gestiunea utilizatorilor și a procesului de achiziție.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Client & Comanda: Gestiunea utilizatorilor și a procesului de achiziție.
 <br>
-&emsp;&emsp;&emsp;Detalii_comanda: Tabel de legătură (Many-to-Many) între comenzi și produse.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Detalii_comanda: Tabel de legătură (Many-to-Many) între comenzi și produse.
 <br>
-&emsp;&emsp;&emsp;Furnizor: Informații despre partenerii comerciali.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Furnizor: Informații despre partenerii comerciali.
 <br>
-&emsp;&emsp;&emsp;Feedback: Recenzii lăsate de clienți pentru produse.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Feedback: Recenzii lăsate de clienți pentru produse.
 <br><br>
 __Caracteristici Principale__
 <br>
@@ -32,17 +32,17 @@ __Caracteristici Principale__
 <br>
 __Interogări SQL__
 <br>
-Este prezentată o serie de interogări SQL pentru a vizualiza:
+&emsp;&emsp;&emsp;Este prezentată o serie de interogări SQL pentru a vizualiza:
 <br>
-&emsp;&emsp;&emsp;-Calculul valorii totale a comenzilor.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-Calculul valorii totale a comenzilor.
 <br>
-&emsp;&emsp;&emsp;-Monitorizarea stocurilor per furnizor și categorie.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-Monitorizarea stocurilor per furnizor și categorie.
 <br>
-&emsp;&emsp;&emsp;-Managementul feedback-ului și al istoricului de comenzi.
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;-Managementul feedback-ului și al istoricului de comenzi.
 
-<br><br>
+<br>
 __Validarea Integrității Datelor__
 <br>
 &emsp;&emsp;&emsp;Proiectul include o etapă de testare a constrângerilor pentru a garanta că baza de date respinge orice informație invalidă. Au fost simulate scenarii de eroare pentru fiecare tip de regulă: încercări de duplicare a cheilor primare (PK), încălcarea unicității email-urilor sau a codurilor CUI (UK), și inserarea de valori negative pentru prețuri sau stocuri (CK). De asemenea, au fost verificate constrângerile de integritate referențială (FK), asigurându-ne că nu pot fi șterse înregistrări părinte (ex: un tip de produs) dacă există înregistrări copil dependente (ex: produse din acea categorie), menținând astfel coerența totală a sistemului de gestiune.
 
-_Proiect generat pentru Oracle Database 12c utilizând Oracle SQL Developer Data Modeler._
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;_Proiect generat pentru Oracle Database 12c utilizând Oracle SQL Developer Data Modeler._
